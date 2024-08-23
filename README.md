@@ -88,6 +88,6 @@
 
 ## 许可证
 
-Copyright © 2024 Xi Xu, all rights reserved.
+Copyright © 2024 [Xi Xu](https://xi-xu.me/), all rights reserved.
 
 Licensed under the [GPL-3.0](https://github.com/xixu-me/Proxy-Everything/blob/main/LICENSE) license.
