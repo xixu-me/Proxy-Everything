@@ -1,10 +1,15 @@
-const HTML_TEMPLATE = `
+const HTML_HOMEPAGE = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proxy Everything</title>
+    <meta property="og:title" content="Xi Xu's Proxy Everything" />
+    <meta property="og:description" content="Welcome to Xi Xu's Proxy Everything!" />
+    <meta property="og:image" content="https://xi-xu.me/images/meta.png" />
+    <meta property="og:url" content="https://proxy.xi-xu.me/" />
+    <title>Xi Xu's Proxy Everything</title>
+    <link rel="Shortcut Icon" href="https://xi-xu.me/images/favicon.png" type="image/x-icon">
     <style>
         body {
             display: flex;
@@ -23,7 +28,7 @@ const HTML_TEMPLATE = `
     </style>
 </head>
 <body>
-    <h1>Proxy Everything</h1>
+    <h1>Xi Xu's Proxy Everything</h1>
     <form id="proxyForm">
         <label for="urlInput">Enter URL:</label>
         <input type="text" id="urlInput" name="url" required>
@@ -38,16 +43,14 @@ const HTML_TEMPLATE = `
             window.location.href = \`/?url=\${encodeURIComponent(url)}\`;
         });
     </script>
-    <div class="footer">
-        This service is built from the GitHub repository <a
-            href="https://github.com/xixu-me/proxy-everything">xixu-me/proxy-everything</a>.
-    </div>
+    <div class="footer">Copyright © 2024 <a href="https://xi-xu.me/"><strong>Xi Xu</strong></a>, all rights
+                    reserved.</div>
 </body>
 </html>
 `;
 
 function generateHtml() {
-    return HTML_TEMPLATE;
+    return HTML_HOMEPAGE;
 }
 
 function isValidUrl(string) {
