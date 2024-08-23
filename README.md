@@ -1,5 +1,5 @@
 <p align="left">
-    English ｜ <a href="README_ZH.md">汉语</a>
+    <a href="README_ZH.md">汉语</a> ｜ English ｜ <a href="README_RU.md">Русский</a> ｜ <a href="README_FR.md">Français</a> ｜ <a href="README_ES.md">Español</a> ｜ <a href="README_DE.md">Deutsch</a> ｜ <a href="README_KO.md">한국어</a>
 </p>
 
 # Proxy Everything - Open Source (PE-OS)
