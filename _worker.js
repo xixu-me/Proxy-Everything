@@ -35,7 +35,7 @@ const HTML_HOMEPAGE = `
             let url = document.getElementById('urlInput').value;
             if (!url.includes('://'))
                 url = 'http://' + url;
-            window.location.href = \`/?url=\${encodeURIComponent(url)}\`;
+            window.open(\`/?url=\${encodeURIComponent(url)}\`, '_blank');
         });
     </script>
     <div class="footer">
