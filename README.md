@@ -4,7 +4,10 @@
 
 Proxy Everything 是一款多功能工具，旨在满足您的所有代理需求。无论您是想管理网络流量、增强安全性还是提高性能，此存储库都能提供全面的解决方案。它易于使用且可高度定制，非常适合开发人员和网络管理员。
 
-## 
+## 试用
+
+- [Xi Xu's Proxy Everything](https://proxy.xi-xu.me)
+- [Proxy Everything 的演示站点](https://proxy.xixu.cloudns.ch/)
 
 ## 部署
 
