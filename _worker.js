@@ -1,33 +1,3 @@
-export default {
-    async fetch(request) {
-        const url = new URL(request.url);
-        let targetUrl = url.searchParams.get('url');
-        if (!targetUrl) {
-            return new Response(generateHtml(), { headers: { 'Content-Type': 'text/html' } });
-        }
-
-        const headers = new Headers({
-            'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
-            'Referer': '',
-            'X-Forwarded-For': '0.0.0.0'
-        });
-
-        const modifiedRequest = new Request(targetUrl, {
-            method: request.method,
-            headers: headers
-        });
-
-        try {
-            const response = await fetch(modifiedRequest);
-            const modifiedResponse = new Response(response.body, response);
-            modifiedResponse.headers.set('X-Proxy-By', 'Cloudflare Worker');
-            return modifiedResponse;
-        } catch (error) {
-            return new Response('Error fetching the requested URL.', { status: 500 });
-        }
-    }
-};
-
 const HTML_TEMPLATE = `
 <!DOCTYPE html>
 <html lang="en">
@@ -79,3 +49,47 @@ const HTML_TEMPLATE = `
 function generateHtml() {
     return HTML_TEMPLATE;
 }
+
+function isValidUrl(string) {
+    try {
+        new URL(string);
+        return true;
+    } catch (_) {
+        return false;
+    }
+}
+
+export default {
+    async fetch(request) {
+        const url = new URL(request.url);
+        let targetUrl = url.searchParams.get('url');
+        if (!targetUrl) {
+            return new Response(generateHtml(), { headers: { 'Content-Type': 'text/html' } });
+        }
+
+        if (!isValidUrl(targetUrl)) {
+            return new Response('Invalid URL provided.', { status: 400 });
+        }
+
+        const headers = new Headers({
+            'User-Agent': 'Mozilla/5.0 (compatible; MyProxyBot/1.0; +http://www.example.com/bot.html)',
+            'Referer': '',
+            'X-Forwarded-For': '0.0.0.0'
+        });
+
+        const modifiedRequest = new Request(targetUrl, {
+            method: request.method,
+            headers: headers
+        });
+
+        try {
+            const response = await fetch(modifiedRequest);
+            const modifiedResponse = new Response(response.body, response);
+            modifiedResponse.headers.set('X-Proxy-By', 'Cloudflare Worker');
+            modifiedResponse.headers.set('Cache-Control', 'max-age=3600');
+            return modifiedResponse;
+        } catch (error) {
+            return new Response(`Error fetching the requested URL: ${error.message}`, { status: 500 });
+        }
+    }
+};
