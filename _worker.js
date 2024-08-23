@@ -59,8 +59,28 @@ function isValidUrl(string) {
     }
 }
 
+function isInternalUrl(url) {
+    const internalPatterns = [
+        /^localhost$/,
+        /^127\.\d+\.\d+\.\d+$/,
+        /^192\.168\.\d+\.\d+$/,
+        /^10\.\d+\.\d+\.\d+$/,
+        /^172\.(1[6-9]|2\d|3[0-1])\.\d+\.\d+$/
+    ];
+    return internalPatterns.some(pattern => pattern.test(url.hostname));
+}
+
+function logRequest(request) {
+    console.log(`Request URL: ${request.url}`);
+}
+
+function logError(error) {
+    console.error(`Error: ${error.message}`);
+}
+
 export default {
     async fetch(request) {
+        logRequest(request);
         const url = new URL(request.url);
         let targetUrl = url.searchParams.get('url');
         if (!targetUrl) {
@@ -69,6 +89,11 @@ export default {
 
         if (!isValidUrl(targetUrl)) {
             return new Response('Invalid URL provided.', { status: 400 });
+        }
+
+        const targetUrlObj = new URL(targetUrl);
+        if (isInternalUrl(targetUrlObj)) {
+            return new Response('Access to internal URLs is not allowed.', { status: 403 });
         }
 
         const headers = new Headers({
@@ -89,6 +114,7 @@ export default {
             modifiedResponse.headers.set('Cache-Control', 'max-age=3600');
             return modifiedResponse;
         } catch (error) {
+            logError(error);
             return new Response(`Error fetching the requested URL: ${error.message}`, { status: 500 });
         }
     }
