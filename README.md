@@ -66,7 +66,7 @@ Proxy Everything 是一款多功能工具，旨在满足您的所有代理需求
 
 ### 3. 获取访问链接
 
-在 Workers 控制台找到下面的链接即可。
+在 Worker 仪表板找到下面的链接即可。
 ![image](https://github.com/Harry-zklcdc/go-proxy-bingai/assets/21104213/8fef9dd4-285e-414a-9237-5378e981b96c)
 
 ### 4. 后续升级
@@ -76,7 +76,7 @@ Proxy Everything 是一款多功能工具，旨在满足您的所有代理需求
 
 ### 5. 自定义域名（可选）
 
-在 Workers 控制台中, 选择「触发器」，点击「添加自定义域」即可实现自定义域名
+在 Worker 仪表板中, 选择「触发器」，点击「添加自定义域」即可实现自定义域名
 ![d64fcdab4dc44504909cc6faa86ae8a1](https://github.com/Harry-zklcdc/go-proxy-bingai/assets/21104213/6f0de2c5-1dd4-4801-b163-6d485836c73d)
 
 ## 声明
