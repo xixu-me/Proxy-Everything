@@ -1,13 +1,12 @@
-# Proxy Everything
+# Proxy Everything - Open Source (PE-OS)
 
 ## 描述
 
-Proxy Everything 是一款多功能工具，旨在满足您的所有代理需求。无论您是想管理网络流量、增强安全性还是提高性能，此存储库都能提供全面的解决方案。它易于使用且可高度定制，非常适合开发人员和网络管理员。
+此存储库（PE-OS）是 [Xi Xu's Proxy Everything](https://proxy.xi-xu.me) 的开源版本。PE-OS 旨在为用户提供一个简单和免费的方法来代理任何 URL，同时保护用户的隐私。
 
 ## 试用
 
-- [Xi Xu's Proxy Everything](https://proxy.xi-xu.me)
-- [Proxy Everything 的演示站点](https://proxy.xixu.cloudns.ch/)
+[PE-OS 的官方演示](https://pe-os.xi-xu.me)。
 
 ## 部署
 
