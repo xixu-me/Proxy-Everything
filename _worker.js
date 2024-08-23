@@ -69,12 +69,7 @@ const ERROR_MESSAGES = {
 };
 
 function generateHtml() {
-    return new Response(HTML_TEMPLATE, {
-        headers: {
-            'Content-Type': 'text/html',
-            ...SECURITY_HEADERS
-        }
-    });
+    return new Response(HTML_TEMPLATE);
 }
 
 function isValidUrl(string) {
