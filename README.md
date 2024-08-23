@@ -4,6 +4,8 @@
 
 Proxy Everything 是一款多功能工具，旨在满足您的所有代理需求。无论您是想管理网络流量、增强安全性还是提高性能，此存储库都能提供全面的解决方案。它易于使用且可高度定制，非常适合开发人员和网络管理员。
 
+## 
+
 ## 部署
 
 ### 1. 注册 Cloudflare 账户
@@ -12,8 +14,7 @@ Proxy Everything 是一款多功能工具，旨在满足您的所有代理需求
 
 ### 2. 部署至 Cloudflare Workers
 
-登录账户后, 点击按钮。
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/xixu-me/Proxy-Everything)
+登录账户后, 点击 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/xixu-me/Proxy-Everything)。
 
 点击「Authorize Workers」, 登录 Github 账户向 Workers 授权 GitHub。
 ![image-20240308100821060](https://github.com/Harry-zklcdc/go-proxy-bingai/assets/21104213/241edb52-b1ef-4a2c-8525-bfa3d148391b)
