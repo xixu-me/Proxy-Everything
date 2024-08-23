@@ -24,7 +24,7 @@
 点击「I have a account」。
 ![image-20240308100942925](https://github.com/Harry-zklcdc/go-proxy-bingai/assets/21104213/219fc538-e412-4a52-913c-6c4878d50325)
 
-点击「Worker Dashboard」。
+点击「Workers Dashboard」。
 ![image-20240308101056834](https://github.com/Harry-zklcdc/go-proxy-bingai/assets/21104213/4b4a96be-90b3-40cc-9b50-b214980f2ab2)
 
 复制 「Account ID」。
