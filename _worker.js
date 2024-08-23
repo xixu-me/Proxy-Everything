@@ -47,16 +47,25 @@ const HTML_TEMPLATE = `
 `;
 
 const SECURITY_HEADERS = {
-    'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self';",
+    'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; frame-ancestors 'none';",
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block'
+    'X-XSS-Protection': '1; mode=block',
+    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
+    'Referrer-Policy': 'no-referrer',
+    'Permissions-Policy': 'geolocation=(), microphone=(), camera=()'
 };
 
 const PROXY_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (compatible; MyProxyBot/1.0; +http://www.example.com/bot.html)',
     'Referer': '',
     'X-Forwarded-For': '0.0.0.0'
+};
+
+const ERROR_MESSAGES = {
+    INVALID_URL: 'Invalid URL provided.',
+    INTERNAL_URL: 'Access to internal URLs is not allowed.',
+    FETCH_ERROR: 'Error fetching the requested URL: '
 };
 
 function generateHtml() {
@@ -107,12 +116,12 @@ async function handleRequest(request) {
     }
 
     if (!isValidUrl(targetUrl)) {
-        return new Response('Invalid URL provided.', { status: 400 });
+        return new Response(ERROR_MESSAGES.INVALID_URL, { status: 400 });
     }
 
     const targetUrlObj = new URL(targetUrl);
     if (isInternalUrl(targetUrlObj)) {
-        return new Response('Access to internal URLs is not allowed.', { status: 403 });
+        return new Response(ERROR_MESSAGES.INTERNAL_URL, { status: 403 });
     }
 
     const modifiedRequest = new Request(targetUrl, {
@@ -128,7 +137,7 @@ async function handleRequest(request) {
         return modifiedResponse;
     } catch (error) {
         logError(error);
-        return new Response(`Error fetching the requested URL: ${error.message}`, { status: 500 });
+        return new Response(`${ERROR_MESSAGES.FETCH_ERROR}${error.message}`, { status: 500 });
     }
 }
 
