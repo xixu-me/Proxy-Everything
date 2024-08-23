@@ -4,12 +4,7 @@ const HTML_HOMEPAGE = `
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Xi Xu's Proxy Everything" />
-    <meta property="og:description" content="Welcome to Xi Xu's Proxy Everything!" />
-    <meta property="og:image" content="https://xi-xu.me/images/meta.png" />
-    <meta property="og:url" content="https://proxy.xi-xu.me/" />
-    <title>Xi Xu's Proxy Everything</title>
-    <link rel="Shortcut Icon" href="https://xi-xu.me/images/favicon.png" type="image/x-icon">
+    <title>Proxy Everything</title>
     <style>
         body {
             display: flex;
@@ -28,7 +23,7 @@ const HTML_HOMEPAGE = `
     </style>
 </head>
 <body>
-    <h1>Xi Xu's Proxy Everything</h1>
+    <h1>Proxy Everything</h1>
     <form id="proxyForm">
         <label for="urlInput">Enter URL:</label>
         <input type="text" id="urlInput" name="url" required>
@@ -43,8 +38,10 @@ const HTML_HOMEPAGE = `
             window.location.href = \`/?url=\${encodeURIComponent(url)}\`;
         });
     </script>
-    <div class="footer">Copyright © 2024 <a href="https://xi-xu.me/"><strong>Xi Xu</strong></a>, all rights
-                    reserved.</div>
+    <div class="footer">
+        This service is built from the GitHub repository <a
+            href="https://github.com/xixu-me/proxy-everything">xixu-me/proxy-everything</a>.
+    </div>
 </body>
 </html>
 `;
