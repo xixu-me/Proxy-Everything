@@ -46,8 +46,26 @@ const HTML_TEMPLATE = `
 </html>
 `;
 
+const SECURITY_HEADERS = {
+    'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self';",
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block'
+};
+
+const PROXY_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (compatible; MyProxyBot/1.0; +http://www.example.com/bot.html)',
+    'Referer': '',
+    'X-Forwarded-For': '0.0.0.0'
+};
+
 function generateHtml() {
-    return HTML_TEMPLATE;
+    return new Response(HTML_TEMPLATE, {
+        headers: {
+            'Content-Type': 'text/html',
+            ...SECURITY_HEADERS
+        }
+    });
 }
 
 function isValidUrl(string) {
@@ -72,50 +90,48 @@ function isInternalUrl(url) {
 
 function logRequest(request) {
     console.log(`Request URL: ${request.url}`);
+    console.log(`Request Method: ${request.method}`);
+    console.log(`Request Headers: ${JSON.stringify([...request.headers])}`);
 }
 
 function logError(error) {
     console.error(`Error: ${error.message}`);
 }
 
-export default {
-    async fetch(request) {
-        logRequest(request);
-        const url = new URL(request.url);
-        let targetUrl = url.searchParams.get('url');
-        if (!targetUrl) {
-            return new Response(generateHtml(), { headers: { 'Content-Type': 'text/html' } });
-        }
-
-        if (!isValidUrl(targetUrl)) {
-            return new Response('Invalid URL provided.', { status: 400 });
-        }
-
-        const targetUrlObj = new URL(targetUrl);
-        if (isInternalUrl(targetUrlObj)) {
-            return new Response('Access to internal URLs is not allowed.', { status: 403 });
-        }
-
-        const headers = new Headers({
-            'User-Agent': 'Mozilla/5.0 (compatible; MyProxyBot/1.0; +http://www.example.com/bot.html)',
-            'Referer': '',
-            'X-Forwarded-For': '0.0.0.0'
-        });
-
-        const modifiedRequest = new Request(targetUrl, {
-            method: request.method,
-            headers: headers
-        });
-
-        try {
-            const response = await fetch(modifiedRequest);
-            const modifiedResponse = new Response(response.body, response);
-            modifiedResponse.headers.set('X-Proxy-By', 'Cloudflare Worker');
-            modifiedResponse.headers.set('Cache-Control', 'max-age=3600');
-            return modifiedResponse;
-        } catch (error) {
-            logError(error);
-            return new Response(`Error fetching the requested URL: ${error.message}`, { status: 500 });
-        }
+async function handleRequest(request) {
+    logRequest(request);
+    const url = new URL(request.url);
+    let targetUrl = url.searchParams.get('url');
+    if (!targetUrl) {
+        return generateHtml();
     }
+
+    if (!isValidUrl(targetUrl)) {
+        return new Response('Invalid URL provided.', { status: 400 });
+    }
+
+    const targetUrlObj = new URL(targetUrl);
+    if (isInternalUrl(targetUrlObj)) {
+        return new Response('Access to internal URLs is not allowed.', { status: 403 });
+    }
+
+    const modifiedRequest = new Request(targetUrl, {
+        method: request.method,
+        headers: PROXY_HEADERS
+    });
+
+    try {
+        const response = await fetch(modifiedRequest);
+        const modifiedResponse = new Response(response.body, response);
+        modifiedResponse.headers.set('X-Proxy-By', 'Cloudflare Worker');
+        modifiedResponse.headers.set('Cache-Control', 'max-age=3600');
+        return modifiedResponse;
+    } catch (error) {
+        logError(error);
+        return new Response(`Error fetching the requested URL: ${error.message}`, { status: 500 });
+    }
+}
+
+export default {
+    fetch: handleRequest
 };
