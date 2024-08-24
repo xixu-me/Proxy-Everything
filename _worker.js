@@ -40,7 +40,7 @@ const HTML_HOMEPAGE = `
     </script>
     <div class="footer">
         This service is built from the GitHub repository <a
-            href="https://github.com/xixu-me/Proxy-Everything">xixu-me/Proxy-Everything</a>.
+            href="https://github.com/xixu-me/Proxy-Everything" target="_blank">xixu-me/Proxy-Everything</a>.
     </div>
 </body>
 </html>
