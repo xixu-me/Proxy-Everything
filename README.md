@@ -1,10 +1,8 @@
-<a href="https://star-history.com/#xixu-me/Proxy-Everything&Date">
- <picture>
+<picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=xixu-me/Proxy-Everything&type=Date&theme=dark" />
    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=xixu-me/Proxy-Everything&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=xixu-me/Proxy-Everything&type=Date" />
- </picture>
-</a>
+   <img alt="Star History Chart" />
+</picture>
 
 <p align="left">
     <a href="README_ZH.md">汉语</a> ｜ English ｜ <a href="README_RU.md">Русский</a> ｜ <a href="README_FR.md">Français</a> ｜ <a href="README_ES.md">Español</a> ｜ <a href="README_DE.md">Deutsch</a> ｜ <a href="README_KO.md">한국어</a>
