@@ -6,7 +6,7 @@
 
 ## 描述
 
-此存储库（PE-OS）是 [Xi Xu's Proxy Everything](https://proxy.xi-xu.me) 的开源实现。PE-OS 旨在为开发者提供一个简单、快速、自由的代理服务的解决方案，它可以代理任何 URL，同时保护用户的隐私。
+此存储库（PE-OS）是 [Xi Xu's Proxy Everything](https://proxy.xi-xu.me) 的开源实现。PE-OS 旨在为开发者提供一个简单、快速、自由的代理服务的解决方案，它可以代理几乎任何 URL，同时保护用户的隐私。
 
 ## 演示
 
