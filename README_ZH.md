@@ -1,4 +1,4 @@
-< align="center">
+<div align="center">
 
 汉语 ｜ <a href="README.md">English</a> ｜ <a href="README_RU.md">Русский</a> ｜ <a href="README_FR.md">Français</a> ｜ <a href="README_ES.md">Español</a> ｜ <a href="README_DE.md">Deutsch</a> ｜ <a href="README_KO.md">한국어</a>
 
