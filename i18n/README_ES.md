@@ -88,6 +88,6 @@ Este repositorio (PE-OS) es solo para aprendizaje y comunicación. Está estrict
 
 ## Licencia
 
-Copyright © 2024 [Xi Xu](https://xi-xu.me), todos los derechos reservados.
+Copyright © 2024 [Xi Xu](https://xi-xu.me). Todos los derechos reservados.
 
 Licenciado bajo la licencia [GPL-3.0](https://github.com/xixu-me/Proxy-Everything/blob/main/LICENSE).
