@@ -94,6 +94,6 @@
 
 ## 许可证
 
-版权所有 © 2024 [Xi Xu](https://xi-xu.me/)，保留所有权利。
+版权所有 © 2024 [Xi Xu](https://xi-xu.me/)。保留所有权利。
 
 根据 [GPL-3.0](https://github.com/xixu-me/Proxy-Everything/blob/main/LICENSE) 许可证授权。
