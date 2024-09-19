@@ -88,6 +88,6 @@ Ce référentiel (PE-OS) est destiné uniquement à l'apprentissage et à la com
 
 ## Licence
 
-Copyright © 2024 [Xi Xu](https://xi-xu.me), tous droits réservés.
+Copyright © 2024 [Xi Xu](https://xi-xu.me). Tous droits réservés.
 
 Sous licence [GPL-3.0](https://github.com/xixu-me/Proxy-Everything/blob/main/LICENSE).
