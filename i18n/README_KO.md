@@ -89,6 +89,6 @@ Worker 대시보드에서 "Trigger"를 선택하고 "Add custom domain"을 클�
 
 ## 라이선스
 
-저작권 © 2024 [Xi Xu](https://xi-xu.me), 모든 권리 보유.
+저작권 © 2024 [Xi Xu](https://xi-xu.me). 모든 권리 보유.
 
 [GPL-3.0](https://github.com/xixu-me/Proxy-Everything/blob/main/LICENSE) 라이선스에 따라 라이선스가 부여되었습니다.
