@@ -88,6 +88,6 @@
 
 ## Лицензия
 
-Авторские права © 2024 [Xi Xu](https://xi-xu.me). Все права защищены.
+Авторские права &copy; [Xi Xu](https://xi-xu.me). Все права защищены.
 
 Лицензируется по лицензии [GPL-3.0](https://github.com/xixu-me/Proxy-Everything/blob/main/LICENSE).
