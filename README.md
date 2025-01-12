@@ -1,14 +1,4 @@
 <div align="center">
-
-<picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=xixu-me/Proxy-Everything&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=xixu-me/Proxy-Everything&type=Date" />
-   <img alt="Star History Chart" />
-</picture>
-
-<br>
-<br>
-
 <a href="i18n/README_ZH.md">汉语</a> ｜ English ｜ <a href="i18n/README_RU.md">Русский</a> ｜ <a href="i18n/README_FR.md">Français</a> ｜ <a href="i18n/README_ES.md">Español</a> ｜ <a href="i18n/README_DE.md">Deutsch</a> ｜ <a href="i18n/README_KO.md">한국어</a>
 
 # Proxy Everything - Open Source (PE-OS)
