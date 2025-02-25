@@ -6,6 +6,8 @@
 
 </div>
 
+# 참고: 이 저장소는 더 이상 유지되지 않습니다. [Xget](https://github.com/xixu-me/Xget)을 확인하세요.
+
 ## 설명
 
 이 저장소(PE-OS)는 [Xi Xu's Proxy Everything](https://proxy.xi-xu.me)의 오픈 소스 구현입니다. PE-OS는 개발자에게 사용자 개인 정보를 보호하면서 모든 URL을 프록시할 수 있는 간단하고 빠르며 무료 프록시 서비스 솔루션을 제공하는 것을 목표로 합니다.
