@@ -6,6 +6,8 @@
 
 </div>
 
+# REMARQUE : ce référentiel n'est plus maintenu, veuillez consulter [Xget](https://github.com/xixu-me/Xget).
+
 ## Description
 
 Ce référentiel (PE-OS) est une implémentation open source de [Xi Xu's Proxy Everything](https://proxy.xi-xu.me). PE-OS vise à fournir aux développeurs une solution de service proxy simple, rapide et gratuite qui peut proxyer n'importe quelle URL tout en protégeant la confidentialité des utilisateurs.
