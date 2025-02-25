@@ -5,6 +5,8 @@
 
 </div>
 
+# NOTE: This repository is no longer maintained, please check out [Xget](https://github.com/xixu-me/Xget).
+
 ## Description
 
 This repository (PE-OS) is an open source implementation of [Xi Xu's Proxy Everything](https://proxy.xi-xu.me). PE-OS aims to provide developers with a simple, fast, and free proxy service solution that can proxy almost any URL while protecting user privacy.
