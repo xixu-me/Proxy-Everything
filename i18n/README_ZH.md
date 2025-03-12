@@ -2,21 +2,21 @@
 
 汉语 ｜ <a href="/README.md">English</a> ｜ <a href="README_RU.md">Русский</a> ｜ <a href="README_FR.md">Français</a> ｜ <a href="README_ES.md">Español</a> ｜ <a href="README_DE.md">Deutsch</a> ｜ <a href="README_KO.md">한국어</a>
 
-# Proxy Everything - Open Source (PE-OS)
+# 万用代理 - 开源版，Proxy Everything - Open Source（PE-OS）
 
 </div>
 
-# 注意：此存储库不再维护，请查看 [Xget](https://github.com/xixu-me/Xget)。
+# 注意: 本存储库已停止维护，请移步至 [Xget](https://github.com/xixu-me/Xget)
 
-## 描述
+## 描述说明
 
-此存储库（PE-OS）是 [Xi Xu's Proxy Everything](https://proxy.xi-xu.me) 的开源实现。PE-OS 旨在为开发者提供一个简单、快速、自由的代理服务的解决方案，它可以代理几乎任何 URL，同时保护用户的隐私。
+本存储库（PE-OS）是 [Xi Xu's Proxy Everything](https://proxy.xi-xu.me) 的开源实现。PE-OS 旨在为开发者提供一个简单、快速且免费的代理服务解决方案，能够代理几乎所有 URL，同时保护用户隐私。
 
-## 演示
+## 在线演示
 
-[PE-OS 的官方演示](https://pe-os.xi-xu.me)。
+[PE-OS 官方演示站](https://pe-os.xi-xu.me)。
 
-## 部署
+## 部署指南
 
 ### 1. 注册 Cloudflare 账户
 
@@ -90,11 +90,11 @@
 在 Worker 仪表板中, 选择「触发器」，点击「添加自定义域」即可实现自定义域名
 ![d64fcdab4dc44504909cc6faa86ae8a1](https://github.com/Harry-zklcdc/go-proxy-bingai/assets/21104213/6f0de2c5-1dd4-4801-b163-6d485836c73d)
 
-## 声明
+## 免责声明
 
 此存储库（PE-OS）仅供学习交流使用，严禁用于商业甚至非法用途。使用者需遵守当地法律法规，否则后果自负。
 
-## 许可证
+## 开源协议
 
 版权所有 &copy; [Xi Xu](https://xi-xu.me/)。保留所有权利。
 
