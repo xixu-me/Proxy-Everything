@@ -5,6 +5,7 @@ on:
       - main
     paths-ignore:
       - "**/README.md"
+      - "**/i18n/**"
 jobs:
   deploy:
     runs-on: ubuntu-latest
